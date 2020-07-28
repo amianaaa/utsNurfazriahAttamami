@@ -80,6 +80,7 @@
                 <li><a href="download.html"><span>Brosur</span></a></li>
                 <li><a href="contact.html"><span>Contact Us</span></a></li>
                 <li class="active"><a href="signup.html"><span>Sign Up</span></a></li>
+                <li class=""><a href="Video.html"><span>Video</span></a></li>
               </ul>
             </nav>
           </div>
@@ -124,6 +125,13 @@
 
      <div class="site-section ">
       <div class="container">
+        <center>
+          <audio controls autoplay>
+            <source src="https://www.w3schools.com/tags/horse.ogg" type="audio/ogg">
+            <source src="https://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </center>
         <div class="row mb-5">
           <div class="col-md-12 text-center">
             <h2 class="site-section-heading text-center font-secondary">Sign In</h2>
@@ -134,10 +142,10 @@
               <div  class="form">
         <form id="contactform"> 
                 <p class="contact"><label for="username">Username</label></p> 
-          <input id="username" name="username" placeholder="username" required="" tabindex="2" type="text"> 
+          <input id="username" name="username" placeholder="username" tabindex="2" type="text"> 
            
                 <p class="contact"><label for="password">Password</label></p> 
-          <input type="password" id="password" name="password" required=""> 
+          <input type="password" id="password" name="password"> 
             
             <input class="buttom" name="submit" id="submit" tabindex="5" value="Login" type="submit">   
    </form> 
@@ -233,5 +241,12 @@
   <script src="js/main.js"></script>
       <link rel="stylesheet" type="text/css" href="css/style-form.css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/demo.css" media="all" />
+    <script>
+      $('#contactform').submit(function(){
+        if($('#username').val() == ''){
+          alert("Username Tidak Boleh Kosong!");
+        }
+      })
+    </script>
   </body>
 </html>
